@@ -29,6 +29,11 @@ public class MyStack<T> implements MyCollection <T>{
     public T pop() {
         T result = lastElement.value;
         remove(stackSize-1);
+        Node temp = firstElement;
+        for(int i = 0; i < stackSize-1; i++){
+            temp = temp.next;
+        }
+        lastElement = temp;
         return result;
     }
 

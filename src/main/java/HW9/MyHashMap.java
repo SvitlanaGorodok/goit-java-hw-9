@@ -21,7 +21,9 @@ public class MyHashMap <K,T> {
     }
 
     public void clear(){
-        ArrayOfLists = null;
+        for (int i = 0; i < CAPACITY; i++){
+            ArrayOfLists[i] = null;
+        }
     }
 
     public int size(){
